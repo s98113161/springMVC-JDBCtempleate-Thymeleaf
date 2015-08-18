@@ -3,6 +3,7 @@ package com.kang.springdemo.controller;
 import java.io.IOException;
 import java.util.List;
 
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -15,6 +16,7 @@ import com.kang.springdemo.model.Student;
 
 @Controller
 public class HomeController {
+	private static final Logger logger = Logger.getLogger(HomeController.class);
 	@Autowired
 private StudentDAO studentDAO;
 	@RequestMapping(value="/")
@@ -31,9 +33,9 @@ private StudentDAO studentDAO;
 //		return  "";
 //	}
 	 @RequestMapping(value="home",method = RequestMethod.GET)
-		public String printWelcome( ModelMap model) {
-			model.addAttribute("title", "Hello world!");
-			return "main";
+		public ModelAndView printWelcome( ModelAndView model) {
+			model.addObject("title", "Hello world!");
+			return  model;
 		}
 	
 }

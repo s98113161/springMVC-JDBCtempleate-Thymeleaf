@@ -34,7 +34,7 @@ private StudentDAO studentDAO;
 //	}
 	 @RequestMapping(value="home",method = RequestMethod.GET)
 		public ModelAndView printWelcome( ModelAndView model) {
-			model.addObject("title", "Hello world!");
+			model.addObject("title", "Yu Hao Kang");
 			return  model;
 		}
 	

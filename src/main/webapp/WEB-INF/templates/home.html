@@ -12,8 +12,11 @@
 
   <body>
   
-    <p th:utext="#{home.welcome}">Welcome to our grocery store!</p>
-  
+    <p th:utext="#{home.welcome(${title})}">Welcome to our grocery store!</p>
+  Established locale country: <span th:text="${#locale.country}">US</span>
+  <p>
+  Now you are looking at a <span th:text="'working web application'">template file</span>.
+</p>
   </body>
 
 </html>

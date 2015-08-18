@@ -55,8 +55,8 @@ public class MvcConfiguration extends WebMvcConfigurerAdapter{
         templateResolver.setSuffix(".html");
         templateResolver.setCharacterEncoding("UTF-8");
         templateResolver.setCacheTTLMs(3600000L);
-//        templateResolver.setTemplateMode("HTML5");
-        templateResolver.setTemplateMode("XHTML");
+        templateResolver.setTemplateMode("HTML5");
+//        templateResolver.setTemplateMode("XHTML");
 		return templateResolver;
 	}
 	
@@ -87,7 +87,7 @@ public class MvcConfiguration extends WebMvcConfigurerAdapter{
 	 @Bean
 	    @Description("Spring message resolver")
 	    public ResourceBundleMessageSource messageSource() {  
-	        ResourceBundleMessageSource messageSource = new ResourceBundleMessageSource();  
+		ResourceBundleMessageSource messageSource = new ResourceBundleMessageSource();  
 	        messageSource.setBasename("/i18n/messages");  
 	        
 	        return messageSource;  

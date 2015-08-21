@@ -33,14 +33,23 @@
 	    <p>firstName: <span th:text="*{firstName}">Krishna</span>.</p>
 	    <p>lastName: <span th:text="*{lastName}">Srinivasan</span>.</p>
 	  </div>
-	  
-	  
  	 <div>
  	  <p>另一種用法:</p>
 	    <p>firstName: <span th:text="*{map.firstName}">Krishna</span>.</p>
 	    <p>lastName: <span th:text="*{map.lastName}">Srinivasan</span>.</p>
 	  </div>
-	 
+	  <p>Age: <span th:text="*{age != null}? *{age} : '(當找不到AGE時我可以替代它)'">27</span>.</p>
+	 <span  th:text="|Welcome to our application ,${map.firstName}|"></span>
+  
+  <form action="subscribe.html" th:action="@{/subscribe}">
+  <fieldset>
+    <input type="text" name="email" />
+    <input type="submit" value="Subscribe me!" th:value="	#{subscribe.submit}"/>
+    
+    <input type="checkbox" name="option1" checked="checked" />
+	<input type="checkbox" name="option2" />
+  </fieldset>
+</form>
   </body>
 
 </html>

@@ -7,6 +7,7 @@
 	<table border="1">
 		<thead>
 			<tr>
+			<th>iterStat</th>
 				<th th:utext="#{studentId}">studentId</th>
 				<th th:utext="#{studentName}">studentName</th>
 				<th th:utext="#{studentHobby}">studentHobby</th>
@@ -16,7 +17,8 @@
 			</tr>
 		</thead>
 		<tbody>
-			<tr th:each="student : ${students}">
+			<tr th:each="student,iterStat : ${students}" th:class="${iterStat.odd}? 'odd'">
+				<td th:text="${iterStat}">studentId</td>
 				<td th:text="${student.studentId}">studentId</td>
 				<td th:text="${student.studentName}">studentName</td>
 				<td th:text="${student.studentHobby}">studentHobby</td>

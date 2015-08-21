@@ -41,6 +41,7 @@ public class HomeController {
 		 HashMap<String, String> map =new HashMap<String, String>();
 		 map.put("firstName","YuHao");
 		 map.put("lastName","Kang");
+		
 		 model.addObject("map", map);
 		model.addObject("title", "Yu Hao Kang");
 

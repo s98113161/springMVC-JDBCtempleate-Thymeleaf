@@ -1,22 +1,19 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:th="http://www.thymeleaf.org">
+<html xmlns="http://www.w3.org/1999/xhtml"  xmlns:th="http://www.thymeleaf.org">
 
   <head>
     <title>Good Thymes Virtual Grocery</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <link rel="stylesheet" type="text/css" media="all" 
-          href="../../css/gtvg.css" th:href="@{/css/gtvg.css}" />
   </head>
 
   <body>
   
-    <p th:utext="#{home.welcome(${title})}">Welcome to our grocery store!</p>
+  <p th:utext="#{home.welcome(${title})}">Welcome to our grocery store!</p>
   Established locale country: <span th:text="${#locale.country}">US</span>
-  <p>
-  Now you are looking at a <span th:text="'working web application'">template file</span>.
-</p>
+  
+  <p>Now you are looking at a <span th:text="'working web application'">template file</span>.</p>
+
 <div><a th:href="@{http://www.thymeleaf.org/documentation.html}">我是一個絕對路徑的連結...</a></div>
 <div><a href="http://www.thymeleaf.org/documentation.html">一般html寫法..這兩個好像沒有差別</a></div>
 <div><a th:href="@{/home.html}">Context-relative URLs,@號是跟目錄的意思,這用法會連到"同根+同目錄"下的另一個app</a></div>

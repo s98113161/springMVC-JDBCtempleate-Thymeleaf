@@ -48,7 +48,7 @@ public class StudentDAOImpl implements StudentDAO {
 
 	@Override
 	public Student findById(int studentId) {
-		String sql = "SELECT * FROM contact WHERE contact_id=" + studentId;
+		String sql = "SELECT token FROM contact WHERE contact_id=" + studentId;
 		return  jdbcTemplate.query(sql, new ResultSetExtractor<Student>() {
 
 			@Override
